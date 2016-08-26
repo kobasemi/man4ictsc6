@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 * [Server Operation](server/README.md)
+  * [Comparison of CentOS / Ubuntu versions](server/comparison.md)
+  * [Network Configuration](server/network_configuration.md)
   * [Web Server](server/web.md)
   * [Firewall](server/firewall.md)
 * [Netowrk Operation](network/README.md)
