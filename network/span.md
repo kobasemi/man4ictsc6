@@ -10,10 +10,10 @@
 ローカルSPANとは1つのスイッチ内で行うSPANのこと．SPANで指定する送信元ポートと宛先ポートは全て同じスイッチ内にある．
 新しくSPANセッションを作成するためには送信元ポート/VLAN（モニターされる側），および宛先ポート（モニターする側）を指定する必要がある．
 
-既存のSPANセッションの削除
+既存のSPANセッションの削除  
 `(config)# no monitor session`
 
-送信元ポート/送信元VLANの設定
+送信元ポート/送信元VLANの設定  
 `(config)# monitor session number source [interface id | vlan id] [, | -] [both | rx | tx]`
 
 |monitor sessions|パラメータ説明|
@@ -27,7 +27,7 @@
 |rx|受信トラフィックのみをモニターする|
 |tx|送信トラフィックのみをモニターする|
 
-宛先ポート
+宛先ポート  
 `(config)# monitor session number destination [interface id] [, | -] [encapsulation replicate]`
 
 |monitor sessions|パラメータ説明|
@@ -39,8 +39,8 @@
 |encapsulation replicate|タグ付きのトラフィックを受信したい場合に指定する これを指定しない場合デフォルトでタグ無し時の状態でパケットが宛先ポートに転送されることになる|
 
 ### 具体例
-F0/10で送受信されるトラフィックをF0/24に接続されたネットワークアナライザで受信する設定
-`(config)# monitor session 1 source interface FastEthernet 0/10`
+F0/10で送受信されるトラフィックをF0/24に接続されたネットワークアナライザで受信する設定  
+`(config)# monitor session 1 source interface FastEthernet 0/10`  
 `(config)# monitor session 1 destination interface FastEthernet 0/24`
 
 ## リモートSPAN
@@ -76,35 +76,35 @@ SW2(config-if)# switchport mode trunk
 ## 概要
 IOS12.4以降で使用可能な機能で，Ciscoルータ上でパケットをキャプチャする機能をEPC（Embedded Packet Capture）という．
 
-キャプチャバッファの作成
-`# monitor capture buffer [buffer-name] size [buffer-size] max-size [element-seize]`
-`[buffer-name]`には保存するバッファ名を指定
-`[buffer-size]`にはバッファのサイズを指定
-`[element-size]`にはパケットごとの最大サイズを指定（オプション）
+キャプチャバッファの作成  
+`# monitor capture buffer [buffer-name] size [buffer-size] max-size [element-seize]`  
+`[buffer-name]`には保存するバッファ名を指定  
+`[buffer-size]`にはバッファのサイズを指定  
+`[element-size]`にはパケットごとの最大サイズを指定（オプション）  
 
-キャプチャポイントの作成
-`# monitor capture poiint [ip | ipv6] [cef capture-point-name interface-name interface-type [both | in | out] | process-switched capture-point-name [both |from-us | in | out]]`
-分かりにくい...
-fastEthernet 0/0の送受信パケットをキャプチャする設定する場合は
+キャプチャポイントの作成  
+`# monitor capture poiint [ip | ipv6] [cef capture-point-name interface-name interface-type [both | in | out] | process-switched capture-point-name [both |from-us | in | out]]`  
+分かりにくい...  
+fastEthernet 0/0の送受信パケットをキャプチャする設定する場合は    
 `# monitor capture point ip cef cef_point FastEthernet 0/0 both`
 
-キャプチャバッファとキャプチャポイントの関連付け
+キャプチャバッファとキャプチャポイントの関連付け  
 `# monitor capture point associate [キャプチャポイント名] [キャプチャバッファ名]`
 
-パケットキャプチャの開始
+パケットキャプチャの開始  
 `# monitor capture point start all`
 
-パケットキャプチャの停止
+パケットキャプチャの停止  
 `# monitor capture point stop all`
 
-キャプチャ状況の確認
+キャプチャ状況の確認  
 `# show monitor capture buffer [キャプチャバッファ名] parameters`
 
-TFTPを用いたエクスポート
+TFTPを用いたエクスポート  
 `# monitor capture buffer [キャプチャバッファ名] export [エクスポート先IPアドレス/ファイル名]`
 
-キャプチャバッファ，キャプチャポイントのクリア
-`# monitor capture buffer [キャプチャバッファ名] clear`
-`# monitor capture point disassociate [キャプチャポイント名]`
-`# no monitor capture buffer [キャプチャバッファ名]`
-`# no [キャプチャポイントの作成で入力したコマンド]`
+キャプチャバッファ，キャプチャポイントのクリア  
+`# monitor capture buffer [キャプチャバッファ名] clear`  
+`# monitor capture point disassociate [キャプチャポイント名]`  
+`# no monitor capture buffer [キャプチャバッファ名]`  
+`# no [キャプチャポイントの作成で入力したコマンド]`  
