@@ -6,4 +6,3 @@
   * [Firewall](server/firewall.md)
 * [Netowrk Operation](network/README.md)
   * [Command Cheat Sheet](network/cheatsheet.md)
-  * [Switch](network/switch.md)
