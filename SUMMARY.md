@@ -7,4 +7,7 @@
   * [LDAP Server](server/ldap.md)
 * [Netowrk Operation](network/README.md)
   * [Command Cheat Sheet](network/cheatsheet.md)
+  * [VyOS](network/vyos/README.md)
+    * [VyOS Basic](network/vyos/vyos-basic.md)
+    * [VyOS Firewall](network/vyos/vyos-firewall.md)
 
