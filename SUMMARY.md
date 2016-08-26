@@ -5,4 +5,5 @@
   * [Web Server](server/web.md)
   * [Firewall](server/firewall.md)
 * [Netowrk Operation](network/README.md)
-  * [Router](network/router.md)
+  * [Command Cheat Sheet](network/cheatsheet.md)
+
