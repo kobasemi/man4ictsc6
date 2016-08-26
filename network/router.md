@@ -56,7 +56,7 @@
 `# show interfaces`
 
 NAT，NAPTテーブル一覧  
-`# show ip nat transiations`
+`# show ip nat translations`
 
 #### OSPF
 OSPFプロセスの全般的な情報確認  
@@ -70,4 +70,4 @@ OSPFの有効なインターフェース，PID,エリア，コスト値一覧
 
 ネイバーリストの確認  
 ルータIDはオプション
-`# show ip ospf neghbor [ルータID]`
+`# show ip ospf negihbor [ルータID]`
