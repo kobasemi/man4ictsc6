@@ -1,6 +1,6 @@
 # Authoritative DNS
 
-ここでは，マスターサーバとスレーブサーバをそれぞれ一台づつ用意し，冗長化させたDNS権威サーバについてまとめる．
+ここでは，マスターサーバとスレーブサーバをそれぞれ一台ずつ用意し，冗長化させたDNS権威サーバについてまとめる．
 
 ## 構築に入る前に…
 
@@ -562,3 +562,4 @@ DNSサーバを起動させる前に，設定ファイルのチェックをお�
 - [強いBIND DNSサーバを構築する　第二回　named.confの基本設定 | ユーロテック情報システム販売株式会社](http://www.eis.co.jp/bind9_src_build_2/)
 - [domain name system - Bind DNS rate-limit and values for responses-per-second and window - Server Fault](http://serverfault.com/questions/490245/bind-dns-rate-limit-and-values-for-responses-per-second-and-window)
 - [ CentOS 7 のBINDを設定する (プライマリ コンテンツサーバー) ](https://www.ipentec.com/document/document.aspx?page=linux-centos-7-bind-configuration)
+
