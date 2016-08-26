@@ -4,6 +4,7 @@
 * [Server Operation](server/README.md)
   * [Web Server](server/web.md)
   * [Firewall](server/firewall.md)
+  * [DHCP Server](server/dhcpd.md)
 * [Netowrk Operation](network/README.md)
   * [Command Cheat Sheet](network/cheatsheet.md)
 
