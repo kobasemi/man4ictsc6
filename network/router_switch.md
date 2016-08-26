@@ -76,7 +76,7 @@ IPv6の情報も表示してくれる
 ## 複数インターフェースをまとめて設定
 `(config)# interface range [インターフェイス]`
 
-具体例
+具体例  
 `(config)# interface range fastEthernet 0/7 - 24`
 
 ## show系コマンド
